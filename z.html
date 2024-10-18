@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Front to Back Cascade with Click</title>
+  <style>
+    body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+    font-family: Arial, sans-serif;
+    flex-direction: column;
+  }
+  
+  .container {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    width: 200px;
+    height: 200px;
+    perspective: 1000px; /* 3D perspective */
+  }
+  
+  .box {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background-color: coral;
+    opacity: 0; /* Start fully transparent */
+/*    transform: translateZ(-200px); /* Start in the back */
+/*    transition: transform 0.5s ease, opacity 0.5s ease; */
+    transition:cubic-bezier(0.215, 0.610, 0.355, 1);
+  }
+  
+  .active {
+    /* transition: margin-right 4s ease-in-out;transform: translateZ(200px);*/ /* Bring the box to the front */
+    /*opacity: 1; */ /* Fade in */
+    transition: margin-right 4s ease-in;
+  }
+  
+  .hidden {
+    transform: translateZ(-200px); /* Send the box to the back */
+    opacity: 0; /* Fade out */
+    transform: translateX(-200px);
+  }
+
+  .hidden1{
+    transform: translateX(200px);
+    opacity: 0;
+  }
+
+  .active1 {
+    transform: translateZ(200px); /* Bring the box to the front */
+    opacity: 1; /* Fade in */
+  }
+  
+  .hidden2 {
+    transform: translateZ(200px); /* Send the box to the back */
+    opacity: 0; /* Fade out */
+    transform: translateX(200px);
+  }
+
+  .hidden3{
+    transform: translateX(-200px);
+    opacity: 0;
+  }
+
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <div class="box" id="box1"></div>
+  <div class="box" id="box2"></div>
+  <div class="box" id="box3"></div>
+  <div class="box" id="box4"></div>
+  <div class="box" id="box5"></div>
+</div>
+
+<button id="nextBtn">Next Box</button>
+<button id="backBtn">Back Box</button>
+<script>
+    let currentIndex = 0; // Start with the first box
+const boxes = document.querySelectorAll('.box');
+
+document.getElementById('nextBtn').addEventListener('click', function() {
+  // Hide the current box
+  boxes[currentIndex].classList.remove('active');
+  boxes[currentIndex].classList.remove('active1');
+  boxes[currentIndex + 1].classList.remove('hidden2');
+  boxes[currentIndex + 1].classList.add('hidden');
+  if(currentIndex >= 1){
+  boxes[currentIndex - 1].classList.remove('hidden3');
+  boxes[currentIndex - 1].classList.add('hidden1');
+  }
+  if(boxes[currentIndex].classList.remove('hidden')){
+    boxes[currentIndex].classList.remove('hidden');
+    boxes[currentIndex].classList.add('hidden1');
+  }
+  boxes[currentIndex].classList.add('hidden');
+  if(currentIndex - 1 >= 0){
+    boxes[currentIndex - 1].classList.remove('hidden');
+    boxes[currentIndex - 1].classList.add('hidden1');
+  }
+  // Move to the next box
+  if(currentIndex + 1){
+    currentIndex = (currentIndex + 1) % boxes.length; // Loop back to the first box if necessary
+  }
+  // Show the next box
+  boxes[currentIndex].classList.remove('hidden1');
+  boxes[currentIndex].classList.add('active');
+});
+
+document.getElementById('backBtn').addEventListener('click', function() {
+  // Hide the current box
+  boxes[currentIndex].classList.remove('active1');
+  boxes[currentIndex].classList.remove('active');
+  if(currentIndex >= 1){
+  boxes[currentIndex - 1].classList.remove('hidden');
+  boxes[currentIndex - 1].classList.add('hidden2');
+  }
+  boxes[currentIndex + 1].classList.remove('hidden1');
+  boxes[currentIndex + 1].classList.add('hidden3');
+
+  if(boxes[currentIndex].classList.remove('hidden2')){
+    boxes[currentIndex].classList.remove('hidden2');
+    boxes[currentIndex].classList.add('hidden3');
+  }
+  boxes[currentIndex].classList.add('hidden2');
+  if(currentIndex - 1 >= 0){
+    boxes[currentIndex - 1].classList.remove('hidden2');
+    boxes[currentIndex - 1].classList.add('hidden3');
+  }
+  // Move to the next box
+  if(currentIndex + 1){
+    currentIndex = (currentIndex + 1) % boxes.length; // Loop back to the first box if necessary
+  }
+  // Show the next box
+  boxes[currentIndex].classList.remove('hidden3');
+  boxes[currentIndex].classList.add('active1');
+});
+
+// Initialize the first box as active
+boxes[currentIndex].classList.add('active');
+
+</script>
+</body>
+</html>

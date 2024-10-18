@@ -1,0 +1,135 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  /* body{
+   background-image:url('background.jpeg');
+    background-position: center; 
+    background-size: 100% 100%;
+    backdrop-filter: blur(2.3px);
+  }*/
+  .tec{
+    display: grid;
+    grid-template-columns: 1fr 6fr;
+    justify-content:center;
+  }
+  .nam{
+    margin-top: 0px;
+  }
+  .navi{
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: 90px;
+    }
+  .Innov{
+    margin-left: 65%;
+  }
+  
+  .content {
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 489px;
+    }
+  
+  .container {
+    text-align: center;
+  }
+  .main-cont{
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+
+}
+
+.op{
+    margin-top: 250px;
+    display: flex;
+    justify-content: center;
+    height: 500px;
+}
+.opt{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    overflow: hidden;
+    position: relative;
+
+}
+  
+.div_box{
+    margin-left: 40px;
+    height: 90px;
+    width: 250px;
+    justify-content: center;
+    align-items: center;
+    border: 5px solid white;
+    border-radius: 60%;
+    backdrop-filter: blur(16px);
+
+}
+.but{
+    margin-left: -120;
+}
+  .options {
+    height: 90px;
+
+    border: 5px solid black;
+    border-radius: 25px;
+    backdrop-filter: blur(8px);
+  }
+  .options:hover{
+    background-color: rgb(172, 172, 202);
+  }
+  .det{
+    border-left: solid 2px;
+    font-size: 2rem;
+  }
+  .optioo{
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+  }
+  .option {
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transform: translateY(0px);
+    transition: opacity 1.0s, transform 1.0s;
+    font-size: 12px;
+    font-weight: bold;
+  }
+  
+  .option.active {
+    justify-content: center;
+    align-items: center;
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  button {
+    margin-inline-start: 200px;
+    margin-inline-end: 200px;
+    padding: 10px 20px;
+    font-size: 2rem;
+    cursor: pointer;
+    background-color:white;
+    color: black;
+    width:75px;
+    height:75px;
+    border: 5px;
+    border-radius: 50%;
+    
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  }
+
+  .foot{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+}

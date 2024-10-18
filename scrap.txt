@@ -1,0 +1,26 @@
+    <div class="content">
+        <div class="container">
+            <div class="main-cont">
+            <div>
+                <button id="prevBtn"><h3><</h3></button>
+            </div>
+            <div>
+            <div class="options">
+            <div class="option active"><font color="white">Student</font></div>
+            <div class="option"><font color="white">Mentor</font></div>
+            <div class="option"><font color="white">Help Desk</font></div>
+            </div>
+            </div>
+            <div>
+            <button id="nextBtn"><h3>></h3></button>
+            </div>
+            </div>
+        </div>
+</div>
+<div class="op">
+<div class="opt">
+<div class="div_box"><font color="white" size="25px">Student</font></div>
+<div class="div_box"><font color="white" size="25px">Mentor</font></div>
+<div class="div_box"><font color="white" size="25px">Help Desk</font></div>
+</div>
+</div>

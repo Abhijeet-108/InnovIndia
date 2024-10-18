@@ -1,0 +1,231 @@
+/*  
+Theme Name: Department Theme
+Theme URI: http://buddydev.com/themes/bp-mag-classic/
+Template: sliet
+Tags:buddypress,classic,2-column
+*/
+@import url(../sliet/style.css);
+
+a, a:hover, a:link, a:active {
+    outline: none;
+}
+
+body {
+    background: #ccc;
+}
+
+.header-left {
+    width: 719px;
+}
+
+div#name-description {
+    background: transparent;
+    width: 580px;
+
+}
+
+div#name-description h1,
+div#name-description h3 {
+    font-family: 'Telex', 'Glegoo', 'Times New Roman', serif;
+    font-size: 24px;
+    font-weight: normal;
+    line-height: 1.2em;
+
+    margin-top: 10px;
+}
+
+div#name-description h3 {
+    font-size: 14px;
+}
+
+#top-main-nav .wrapper_menu .menu {
+    height: 33px;
+}
+
+#wrapper {
+
+
+}
+
+
+#wrapper .inner {
+
+    background: none repeat scroll 0 0 #FFFFFF;
+    border-left: 1px solid #CCCCCC;
+    border-right: 1px solid #CCCCCC;
+    border-style: none solid;
+    border-width: medium 1px;
+    box-shadow: 1px 1px 3px #000000;
+    margin: 0 auto;
+    padding: 10px;
+
+}
+
+#content {
+    width: 870px;
+    float: left;
+}
+
+#sidebar {
+    width: 280px;
+    float: left;
+    border-right: 2px solid #ccc;
+    border-radius: 0px 5px 5px 0px;
+    margin-right: 50px;
+    min-height: 500px;
+}
+
+#content {
+    padding: 10px;
+}
+
+#sidebar {
+    margin: -30px 0px -10px -10px;
+    background: #ECECEC;
+}
+
+/*#sidebar h2{font-size: 26px; line-height: 1.33em;font-family: 'Times New Roman',sans-serif}
+#sidebar ul li ul{
+    margin-left: 20px;
+}
+#sidebar ul li{
+    padding:10px;
+    border:1px solid #ccc;
+}
+#sidebar ul li.even{
+    background: #E6E6E6;
+}
+#sidebar ul li.odd{
+    background: #fff;
+}*/
+
+/*sidebar menu*/
+.dcjq-accordion {
+    background-color: #fff;
+    border-top: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+    border-left: 1px solid #ccc;
+}
+
+.dcjq-accordion ul, .dcjq-accordion ul, .dcjq-accordion ul li {
+    margin: 0;
+    padding: 0;
+    border: none;
+    list-style: none;
+}
+
+.dcjq-accordion ul a {
+    background-repeat: no-repeat;
+    background-position: 10px center;
+    border-top: 1px solid #fff;
+    border-bottom: 1px solid #ccc;
+    padding: 10px 10px 10px 32px;
+    text-decoration: none;
+    display: block;
+    color: #222;
+    font-weight: bold;
+}
+
+.dcjq-accordion ul ul a {
+    font-weight: normal;
+}
+
+.dcjq-accordion ul a.dcjq-parent {
+    background-image: url(skins/images/plus_grey.png);
+    font-weight: bold;
+    background-color: #fff;
+}
+
+.dcjq-accordion ul a.dcjq-parent.active {
+    background-image: url(skins/images/minus_grey.png);
+    background-color: #f3f3f3;
+}
+
+.dcjq-accordion ul a:hover {
+    color: #990000;
+}
+
+.dcjq-accordion ul.sub-menu {
+    padding-left: 20px;
+    border-bottom: 1px solid #ccc;
+
+}
+
+.dcjq-accordion ul.sub-menu li {
+    border: 1px dashed #ccc;
+}
+
+.dcjq-accordion ul.sub-menu li a {
+    border-bottom: none;
+    padding: 2px 10px 2px 32px;
+}
+
+.dcjq-accordion ul.sub-menu li.current_page_item a {
+    font-weight: bold;
+}
+
+
+table .archive-title a {
+    font-size: 13px;
+    color: #444444;
+    font-family: Helvetica;
+    font-weight: normal;
+
+}
+
+#box-table-a {
+    border-collapse: collapse;
+    font-family: Helvetica;
+    font-size: 13px;
+    margin-bottom: 20px;
+
+    margin-top: 20px;
+    text-align: left;
+    width: 100%;
+}
+
+#box-table-a th {
+
+    background-color: #fff;
+    border-bottom: 1px solid #F2F2F2;
+    color: #3B7AB8;
+    font-size: 13px;
+    font-weight: normal;
+    padding: 8px;
+
+}
+
+#box-table-a td {
+    font-weight: normal;
+    background-clip: border-box;
+    background-color: #fff;
+    border-bottom: 1px solid #F2F2F2;
+    color: #3B7AB8;
+    padding: 8px;
+
+}
+
+.pagination .page-numbers {
+    padding: .5em;
+}
+
+.pagination .current {
+    color: #888888;
+    border: 1px solid #888888;
+}
+
+.bp-user #content{
+    width: 870px;
+}
+
+.sl-coloured-table thead {
+    background-color: green;
+    color: #fff;
+}
+#contents {
+    display: flex;
+}
+
+.dcjq-accordion ul a {
+    overflow-wrap: break-word;
+}
